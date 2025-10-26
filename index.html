@@ -1,1 +1,163 @@
-Hola mundo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Profesional - Healthcare & AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
+                        url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .skill-card {
+            border: none;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Profesional en Healthcare & IA</h1>
+            <p class="lead">Enfermera con MBA en Healthcare | Especialista en Gestión Orientada a la IA</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre Mí</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">
+                        Profesional de la salud con amplia experiencia en enfermería y un MBA en Healthcare,
+                        buscando combinar la experiencia clínica con la innovación tecnológica a través de la IA
+                        para mejorar la atención al paciente y la eficiencia hospitalaria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Experiencia Profesional</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Experiencia Clínica</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">✓ Experiencia en atención directa al paciente</li>
+                                <li class="mb-3">✓ Gestión de equipos de enfermería</li>
+                                <li class="mb-3">✓ Implementación de protocolos clínicos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestión y Administración</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">✓ MBA en Healthcare Management</li>
+                                <li class="mb-3">✓ Optimización de procesos hospitalarios</li>
+                                <li class="mb-3">✓ Análisis de datos sanitarios</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Habilidades y Competencias</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Enfermería</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• Atención al paciente</li>
+                                <li class="mb-2">• Protocolos clínicos</li>
+                                <li class="mb-2">• Gestión de casos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Gestión</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• Administración sanitaria</li>
+                                <li class="mb-2">• Gestión de equipos</li>
+                                <li class="mb-2">• Optimización de recursos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card skill-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Tecnología</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• Interés en IA aplicada</li>
+                                <li class="mb-2">• Análisis de datos</li>
+                                <li class="mb-2">• Sistemas de salud digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center">
+                    <p class="lead mb-4">¿Interesado en colaborar o saber más sobre mi experiencia?</p>
+                    <a href="mailto:tu@email.com" class="btn btn-primary btn-lg">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">© 2023 - Portfolio Profesional Healthcare & IA</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
