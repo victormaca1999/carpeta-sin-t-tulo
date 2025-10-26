@@ -5,15 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Profesional - Healthcare & AI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #3498db;
+            --primary-color: #2D00F7;
+            --secondary-color: #6A00F4;
+            --accent-color: #8900F2;
+            --light-color: #A100F2;
+            --background-color: #f8f9fa;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Efectos de neón y gradientes */
+        .neon-text {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(45, 0, 247, 0.5);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+        
+        /* Efectos de hover */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Efectos de partículas para IA */
+        .particles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
         }
         .hero-section {
             background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
@@ -37,10 +74,46 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 mb-4">Profesional en Healthcare & IA</h1>
-            <p class="lead">Enfermera con MBA en Healthcare | Especialista en Gestión Orientada a la IA</p>
+    <section class="hero-section text-center position-relative min-vh-100 d-flex align-items-center">
+        <div class="particles-container" id="particles-js"></div>
+        <div class="container position-relative">
+            <div data-aos="fade-up">
+                <h1 class="display-3 mb-4 neon-text fw-bold">Innovación en Salud & IA</h1>
+                <p class="lead fs-4">Transformando el Cuidado de la Salud a través de la Inteligencia Artificial</p>
+                <div class="mt-5">
+                    <a href="#about" class="btn btn-outline-light btn-lg hover-lift me-3">
+                        <i class="fas fa-user-md me-2"></i>Conóceme
+                    </a>
+                    <a href="#projects" class="btn btn-light btn-lg hover-lift">
+                        <i class="fas fa-project-diagram me-2"></i>Proyectos
+                    </a>
+                </div>
+                <div class="mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card bg-transparent text-white border-light hover-lift">
+                                <div class="card-body">
+                                    <i class="fas fa-brain fa-3x mb-3"></i>
+                                    <h5>IA en Salud</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-transparent text-white border-light hover-lift">
+                                <div class="card-body">
+                                    <i class="fas fa-heartbeat fa-3x mb-3"></i>
+                                    <h5>Cuidado Innovador</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about" class="text-white">
+                <i class="fas fa-chevron-down fa-2x animate__animated animate__bounce animate__infinite"></i>
+            </a>
         </div>
     </section>
 
@@ -94,43 +167,129 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section-padding bg-light">
+    <section class="section-padding bg-light" id="skills">
         <div class="container">
-            <h2 class="text-center mb-5">Habilidades y Competencias</h2>
+            <h2 class="text-center mb-5 neon-text" data-aos="fade-up">Habilidades y Tecnologías</h2>
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Enfermería</h5>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card skill-card h-100 hover-lift gradient-bg text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-robot fa-3x mb-4"></i>
+                            <h5 class="card-title">Inteligencia Artificial</h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                            </div>
                             <ul class="list-unstyled">
-                                <li class="mb-2">• Atención al paciente</li>
-                                <li class="mb-2">• Protocolos clínicos</li>
-                                <li class="mb-2">• Gestión de casos</li>
+                                <li class="mb-2">• Machine Learning en Salud</li>
+                                <li class="mb-2">• Procesamiento de Datos Clínicos</li>
+                                <li class="mb-2">• Predicción de Resultados</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Gestión</h5>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card skill-card h-100 hover-lift gradient-bg text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heartbeat fa-3x mb-4"></i>
+                            <h5 class="card-title">Enfermería Avanzada</h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                            </div>
                             <ul class="list-unstyled">
-                                <li class="mb-2">• Administración sanitaria</li>
-                                <li class="mb-2">• Gestión de equipos</li>
-                                <li class="mb-2">• Optimización de recursos</li>
+                                <li class="mb-2">• Cuidados Intensivos</li>
+                                <li class="mb-2">• Protocolos Digitales</li>
+                                <li class="mb-2">• Telemedicina</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card skill-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Tecnología</h5>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card skill-card h-100 hover-lift gradient-bg text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-network fa-3x mb-4"></i>
+                            <h5 class="card-title">Gestión Sanitaria</h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                            </div>
                             <ul class="list-unstyled">
-                                <li class="mb-2">• Interés en IA aplicada</li>
-                                <li class="mb-2">• Análisis de datos</li>
-                                <li class="mb-2">• Sistemas de salud digital</li>
+                                <li class="mb-2">• Optimización de Recursos</li>
+                                <li class="mb-2">• Análisis Predictivo</li>
+                                <li class="mb-2">• Gestión de Crisis</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card skill-card h-100 hover-lift gradient-bg text-white">
+                        <div class="card-body text-center">
+                            <i class="fas fa-brain fa-3x mb-4"></i>
+                            <h5 class="card-title">Innovación Digital</h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• Transformación Digital</li>
+                                <li class="mb-2">• IoT Médico</li>
+                                <li class="mb-2">• Big Data Sanitario</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Impact Section -->
+    <section class="section-padding bg-light" id="global-impact">
+        <div class="container">
+            <h2 class="text-center mb-5 neon-text" data-aos="fade-up">Impacto Global</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <p class="lead">Mi viaje por el mundo me ha permitido combinar mi pasión por la salud con el impacto social</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="card hover-lift h-100">
+                        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800" 
+                             class="card-img-top" alt="Voluntariado en India">
+                        <div class="card-body">
+                            <h5 class="card-title">Experiencia en India</h5>
+                            <p class="card-text">Implementación de sistemas de telemedicina en zonas rurales de India, 
+                            combinando tecnología y cuidado humano para llegar a comunidades remotas.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">2024</span>
+                                <i class="fas fa-heart text-danger"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="card hover-lift h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Impacto en Números</h5>
+                            <div class="row text-center">
+                                <div class="col-6 mb-4">
+                                    <i class="fas fa-users fa-2x mb-3 text-primary"></i>
+                                    <h3 class="counter">1000+</h3>
+                                    <p>Pacientes Atendidos</p>
+                                </div>
+                                <div class="col-6 mb-4">
+                                    <i class="fas fa-laptop-medical fa-2x mb-3 text-primary"></i>
+                                    <h3 class="counter">5</h3>
+                                    <p>Proyectos de IA</p>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-globe fa-2x mb-3 text-primary"></i>
+                                    <h3 class="counter">3</h3>
+                                    <p>Países</p>
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-hand-holding-heart fa-2x mb-3 text-primary"></i>
+                                    <h3 class="counter">10+</h3>
+                                    <p>ONGs Colaboradoras</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,13 +298,20 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section-padding">
+    <section class="section-padding gradient-bg text-white" id="contact">
         <div class="container">
-            <h2 class="text-center mb-5">Contacto</h2>
+            <h2 class="text-center mb-5" data-aos="fade-up">Conectemos</h2>
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
-                    <p class="lead mb-4">¿Interesado en colaborar o saber más sobre mi experiencia?</p>
-                    <a href="mailto:tu@email.com" class="btn btn-primary btn-lg">Contactar</a>
+                    <p class="lead mb-4">¿Interesado en colaborar en proyectos innovadores de IA en salud?</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="mailto:tu@email.com" class="btn btn-light btn-lg hover-lift">
+                            <i class="fas fa-envelope me-2"></i>Email
+                        </a>
+                        <a href="https://linkedin.com/in/tu-perfil" class="btn btn-light btn-lg hover-lift">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,10 +320,65 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p class="mb-0">© 2023 - Portfolio Profesional Healthcare & IA</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="social-links mb-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                    <p class="mb-0">© 2025 - Innovación en Healthcare & IA</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Configuración de particlesJS
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 </html>
